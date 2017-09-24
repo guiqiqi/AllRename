@@ -398,7 +398,7 @@ _abouticonLabel = Label(_aboutPanel, image = _abouticon, compound = TOP, text = 
 _abouticonLabel.image = _abouticon
 _abouticonLabel.pack(side = TOP, padx = 30)
 Label(_aboutPanel, text = "这是一款开源软件，用来批量的重命名文件").pack(pady = 10)
-Label(_aboutPanel, text = "软件许可：GPL许可证").pack(pady = 0)
+Label(_aboutPanel, text = "软件许可：MIT许可证").pack(pady = 0)
 Label(_aboutPanel, text = "作者：guiqiqi187@gmail.com").pack(pady = 10)
 Label(_aboutPanel, text = "项目地址：https://github.com/\nguiqiqi/allRename").pack()
 Button(_aboutPanel, text = "访问项目主页", command = lambda : functions.webOpen(_address)).pack(side = TOP, pady = 10)
