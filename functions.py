@@ -268,3 +268,20 @@ def done(location, fileTreeview):
 		except Exception as error:
 			error.logger.error(error)
 	return None
+
+# Author : guiqiqi187@gmail.com
+# treeviewMouseDown( event_tk.event ) : None
+# 该函数捕捉Treeview中传来的MouseDown事件
+def treeviewMouseDown(event):
+	treeview = event.widget
+	if treeview.identify_row(event.y) not in treeview.selection():
+		treeview.selection_set(treeview.identify_row(event.y))
+
+# Author : guiqiqi187@gmail.com
+# treeviewMouseMove( event_tk.event ) : None
+# 该函数捕捉Treeview中传来的MouseMove事件
+def treeviewMouseMove(event):
+	treeview = event.widget
+	moveto = treeview.index(treeview.identify_row(event.y))
+	for selection in treeview.selection():
+		treeview.move(selection, '', moveto)
