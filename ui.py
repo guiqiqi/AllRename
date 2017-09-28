@@ -538,6 +538,9 @@ _operation.pack(side = LEFT)
 _opScorllY.pack(side = RIGHT, fill = Y)
 _opScorllX.pack(side = BOTTOM, fill = X)
 _opFrameS.pack(side = BOTTOM)
+_operation.bind("<Delete>", lambda event : functions.removeSelect(_operation))
+_operation.bind("<ButtonPress-1>", lambda event : functions.treeviewMouseDown(event))
+_operation.bind("<B1-Motion>", lambda event : functions.treeviewMouseMove(event))
 
 # 规则按钮 Button
 _addRuleButton = Button(_rubtnFrame, compound = LEFT, text = "添加规则",
@@ -567,6 +570,7 @@ _file.pack(side = LEFT)
 _fileScorllY.pack(side = RIGHT, fill = Y)
 _fileScorllX.pack(side = BOTTOM, fill = X)
 _fileFrameS.pack(side = BOTTOM)
+_file.bind("<Delete>", lambda event : functions.removeSelect(_file))
 
 # 文件按钮 Button
 _removeFileButton = Button(_filebtnFrame, compound = LEFT, text = "移除文件",
